@@ -19,7 +19,7 @@ end
 
 client.on :message do |data|
     case data.text
-    when ":atsumori:" then
+    when /.*:atsumori:.*/m then
         client.message channel: data.channel,text: "失礼しました熱盛と出てしまいました"
     when /^<@#{client.self.id}> ?\s(.+)$/m then
         messages=[]
